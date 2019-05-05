@@ -1,0 +1,22 @@
+<div class="message clearfix">
+        <%= image_tag 'images.png' %>
+        <div class="message_box">
+        <% if user_signed_in?%>
+        <li>
+              <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+            </li>
+            <li>
+              <%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get %>
+            </li>
+        <% end %>
+          <p class="user_name">
+            匿名
+            <!-- <span class="time">・8月13日</span> -->
+          <p>
+          <p class="text">
+            <%= tweet.text %>
+          </p>
+        </div>
+        
+ </div>
+ 
